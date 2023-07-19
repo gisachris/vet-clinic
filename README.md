@@ -4,7 +4,6 @@
   - [🛠 Built With](#built-with)
     - [Tech Stack](#tech-stack)
     - [Key Features](#key-features)
-  - [🚀 Live Demo](#live-demo)
 - [💻 Getting Started](#getting-started)
   - [Setup](#setup)
   - [Prerequisites](#prerequisites)
@@ -17,7 +16,6 @@
 - [🤝 Contributing](#contributing)
 - [⭐️ Show your support](#support)
 - [🙏 Acknowledgements](#acknowledgements)
-- [❓ FAQ](#faq)
 - [📝 License](#license)
 
 # 📖 Vet_Clinic <a name="about-project"></a>
@@ -54,12 +52,6 @@
 - **Create and Insert data into the dataBase.**
 - **Run querries to manipulate the data in a requested manner.**
 - **File and Query organisation that is top Notch.**
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-## 🚀 Live Demo <a name="live-demo"></a>
-
-**There is currently no live Demo for this project.**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -152,14 +144,6 @@ If you like this project consider giving us a⭐️star on this project.
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
 I would like to thank Microverse for an opportunity to learn and develop my development skillSet.
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- FAQ (optional) -->
-
-## ❓ FAQ <a name="faq"></a>
-
-- **No questions have yet been Asked**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
