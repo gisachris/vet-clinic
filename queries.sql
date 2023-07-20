@@ -154,8 +154,25 @@ LIMIT 1;
 SELECT animals.id,animals.name,animals.weight_kg,vets.name,visits.date_of_visit FROM animals
 INNER JOIN visits ON animals.id = visits.animals_id
 INNER JOIN vets ON vets.id = visits.vets_id;
+ORDER BY visits.date_of_visit DESC
+LIMIT 1;
 
 /*Query to check How many visits were with a vet that did not specialize in that animal's species?*/
-
+SELECT vets.name, COUNT(*) AS total_visits FROM visits
+INNER JOIN animals ON visits.animals_id = animals.id
+INNER JOIN vets ON visits.vets_id = vets.id
+LEFT JOIN specializations 
+ON animals.species_id = specializations.species_id 
+AND specializations.vets_id = vets.id
+WHERE specializations.species_id IS NULL
+GROUP BY vets.name;
 
 /*Query to check What specialty should Maisy Smith consider getting? Look for the species she gets the most*/
+SELECT species.name AS specialty, COUNT(*) AS species_count FROM visits
+INNER JOIN animals ON visits.animals_id = animals.id
+INNER JOIN vets ON visits.vets_id = vets.id
+INNER JOIN species ON animals.species_id = species.id
+WHERE vets.name = 'maisy smith'
+GROUP BY species.name
+ORDER BY species_count DESC
+LIMIT 1;
