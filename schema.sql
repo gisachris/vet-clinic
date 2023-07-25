@@ -63,3 +63,16 @@ ADD CONSTRAINT VS_VET_FKEY FOREIGN KEY(vets_id) REFERENCES vets(id);
 
 ALTER TABLE visits
 ADD COLUMN date_of_visit DATE;
+
+ALTER TABLE owners ADD COLUMN email VARCHAR(120);
+
+/*Querry to add and index to visits animals_id*/
+CREATE INDEX animals_id_asc ON visits(animals_id);
+CLUSTER visits USING animals_id_asc;
+
+/*Querry to add and index to visits vets_id*/
+CREATE INDEX vets_id_asc ON visits(vets_id);
+CLUSTER visits USING vets_id_asc;
+
+/*Querry to add and index to owners email Column*/
+CREATE INDEX email_index_asc ON owners(email);
