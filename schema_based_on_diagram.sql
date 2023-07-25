@@ -16,14 +16,14 @@ ALTER TABLE
 CREATE INDEX "medical_histories_patient_id_index" ON
   "medical_histories"("patient_id");
 CREATE TABLE "Patients"(
-  "id" BIGINT NOT NULL,
+  "id" SERIAL PRIMARY KEY,
   "name" VARCHAR(255) NOT NULL,
   "date_of_birth" VARCHAR(255) NOT NULL
 );
 ALTER TABLE
     "Patients" ADD PRIMARY KEY("id");
 CREATE TABLE "invoice_items"(
-  "id" INTEGER NOT NULL,
+  "id" SERIAL PRIMARY KEY,
   "unit_price" DECIMAL(8, 2) NOT NULL,
   "quantity" INTEGER NOT NULL,
   "total_price" DECIMAL(8, 2) NOT NULL,
@@ -49,7 +49,7 @@ CREATE INDEX "medical_treatments_medical_histories_id_index" ON
 CREATE INDEX "medical_treatments_treatments_id_index" ON
   "medical_treatments"("treatment_id");
 CREATE TABLE "Invoices"(
-  "id" INTEGER NOT NULL,
+  "id" SERIAL PRIMARY KEY,
   "total_amount" DECIMAL(8, 2) NOT NULL,
   "generated_at" TIMESTAMP(0) WITHOUT TIME ZONE NOT NULL,
   "payed_at" TIMESTAMP(0) WITHOUT TIME ZONE NOT NULL,
