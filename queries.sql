@@ -176,3 +176,12 @@ WHERE vets.name = 'maisy smith'
 GROUP BY species.name
 ORDER BY species_count DESC
 LIMIT 1;
+
+/*Querry to run Aggregate function to count all visits to animal with id 4*/
+SELECT COUNT(*) FROM visits where animal_id = 4;
+
+/*Querry to select all FROM visits where the vets_id = 2*/
+SELECT * FROM visits where vet_id = 2;
+
+/*Querry to select all FROM owners where the email is given below*/
+SELECT * FROM owners where email = 'owner_18327@mail.com';
